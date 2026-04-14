@@ -1,4 +1,4 @@
-package edu.pe.cibertec.runner;
+package edu.pe.cibertec.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
