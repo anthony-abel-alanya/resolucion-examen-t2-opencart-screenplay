@@ -1,5 +1,6 @@
 package edu.pe.cibertec.ui;
 import net.serenitybdd.screenplay.targets.Target;
+
 public class RegistroPage {
 
     public static final Target FIRST_NAME =
