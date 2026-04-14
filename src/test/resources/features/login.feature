@@ -1,4 +1,5 @@
 Feature: User Login
+
   Scenario: Successful login with valid credentials
     Given the user navigates to the login page
     When the user enters email "202312037@cibertec.pe" and password "Test@12345"

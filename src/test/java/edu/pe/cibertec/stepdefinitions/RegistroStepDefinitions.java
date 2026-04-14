@@ -27,7 +27,7 @@ public class RegistroStepDefinitions {
 
     @When("the user fills the form with first name {string}, last name {string}, email {string}, phone {string} and password {string}")
     public void the_user_fills_the_form_with_firstname_lastname_email_phone_and_password(String firstName, String lastName,
-                         String email, String phone, String password) {
+                                                                                         String email, String phone, String password) {
 
         email = email.replace("@", "_" + System.currentTimeMillis() + "@");
 

@@ -1,4 +1,5 @@
 package edu.pe.cibertec.questions;
+
 import edu.pe.cibertec.ui.CarritoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -23,7 +24,7 @@ public class ContadorDelCarrito implements Question<String> {
                     .resolveFor(actor)
                     .getText()
                     .trim();
-        //Contador actualizado
+            //Contador actualizado
             if (!cartText.startsWith("0 item")) {
                 break;
             }

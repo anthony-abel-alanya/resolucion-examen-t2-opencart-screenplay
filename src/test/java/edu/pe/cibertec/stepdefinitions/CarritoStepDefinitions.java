@@ -1,4 +1,5 @@
 package edu.pe.cibertec.stepdefinitions;
+
 import edu.pe.cibertec.questions.ContadorDelCarrito;
 import edu.pe.cibertec.tasks.AgregarAlCarrito;
 import edu.pe.cibertec.ui.CarritoPage;
@@ -7,8 +8,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
+
 import java.util.List;
 import java.util.stream.Collectors;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -50,14 +53,14 @@ public class CarritoStepDefinitions {
     */
 
     @Then("the user should see the product {string} in the cart list")
-    public void theUserShouldSeeTheProductInTheCartList(String producto) {
+    public void the_User_Should_See_The_Product_In_The_Cart_List(String producto) {
         List<String> productosEnCarrito = CarritoPage.CART_PAGE_PRODUCT_NAMES
                 .resolveAllFor(OnStage.theActorInTheSpotlight())
                 .stream()
                 .map(e -> e.getText().trim())
                 .collect(Collectors.toList());
 
-        assertThat("El carrito contiene el producto: " + producto,
+        assertThat("El carrito contiene: " + producto,
                 productosEnCarrito, hasItem(containsString(producto)));
     }
 

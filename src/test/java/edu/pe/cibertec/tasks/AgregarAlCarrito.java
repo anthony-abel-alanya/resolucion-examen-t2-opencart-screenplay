@@ -1,4 +1,5 @@
 package edu.pe.cibertec.tasks;
+
 import edu.pe.cibertec.ui.CarritoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -18,7 +19,6 @@ public class AgregarAlCarrito implements Task {
         this.nombreProducto = nombreProducto;
     }
 
-    // instrumented() permite que Serenity registre la tarea correctamente en reportes
     public static AgregarAlCarrito elProducto(String nombreProducto) {
         return instrumented(AgregarAlCarrito.class, nombreProducto);
     }

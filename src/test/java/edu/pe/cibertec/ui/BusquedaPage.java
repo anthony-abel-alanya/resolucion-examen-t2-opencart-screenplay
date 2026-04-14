@@ -1,6 +1,5 @@
 package edu.pe.cibertec.ui;
 
-
 import net.serenitybdd.screenplay.targets.Target;
 
 public class BusquedaPage {
