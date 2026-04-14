@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class LoginStepDefinitions {
 
     @Given("the user navigates to the login page")
-    public void navigateToLogin() {
+    public void the_user_navigates_to_the_login_page() {
         OnStage.setTheStage(new OnlineCast());
 
         OnStage.theActorCalled("Usuario").attemptsTo(
@@ -29,14 +29,14 @@ public class LoginStepDefinitions {
     }
 
     @When("the user enters email {string} and password {string}")
-    public void enterCredentials(String email, String password) {
+    public void the_user_enters_email_and_password(String email, String password) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 IniciarSesionComo.conCredenciales(email, password)
         );
     }
 
     @And("clicks on the login button")
-    public void clickLogin() {
+    public void clicks_on_the_login_button() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Click.on(LoginPage.LOGIN_BUTTON)
         );
@@ -44,14 +44,14 @@ public class LoginStepDefinitions {
 
     //no valida el nombre de usuario (no aparece), valida My Account
     @Then("the user should see the name {string} in the page header")
-    public void validateUserName(String expectedName) {
+    public void the_user_should_see_the_name_in_the_page_header(String expectedName) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(TextoHeader.mostrado(), containsString("My Account"))
         );
     }
 
     @Then("the user should see the login error message {string}")
-    public void validateErrorMessage(String expectedMessage) {
+    public void the_user_should_see_the_login_error_message(String expectedMessage) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(MensajeErrorLogin.mostrado(), equalTo(expectedMessage))
         );
